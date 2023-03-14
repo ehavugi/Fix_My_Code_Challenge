@@ -18,5 +18,5 @@ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 main.c free_dlistint.c print_dlis
 
 echo "./delete_dnodeint"
 ./delete_dnodeint
-
+rm ./delete_dnodeint
 cd ..

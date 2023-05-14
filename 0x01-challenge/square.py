@@ -2,14 +2,14 @@
 """
 Geometry module. Handle geometries rect and square
 """
-    
+
+
 class rect():
     """Rectangle class. Height and Width my be different.
     """
     width = 0
     height = 0
 
-    
     def __init__(self, *args, **kwargs):
         """Initialize the rectangle class
         """
@@ -30,6 +30,7 @@ class rect():
         """
         return "{}/{}".format(self.width, self.height)
 
+
 class square(rect):
     """Square class that enforce height and width equal
     """
@@ -40,9 +41,12 @@ class square(rect):
             setattr(self, "width", kwargs.get("side", 0))
             setattr(self, "height", kwargs.get("side", 0))
         else:
-            assert kwargs.get("height", 0) == kwargs.get("width", 0), "Height and Width of square must be equal"
-            setattr(self, "width", kwargs.get("height", 0))
-            setattr(self, "height", kwargs.get("width", 0))
+            """assert kwargs.get("height", 0) == kwargs.get("width", 0),
+            "Height and Width of square must be equal"
+            """
+            setattr(self, "width", kwargs.get("width", 0))
+            setattr(self, "height", kwargs.get("height", 0))
+
 
 if __name__ == "__main__":
 
@@ -50,12 +54,12 @@ if __name__ == "__main__":
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
-    
+
     s = square(side=12)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
 
-    s = square(wdith=12, height=9)
+    s = square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
